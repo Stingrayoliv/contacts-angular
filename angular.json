@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "contacts-angular": {
+    "contactsangular": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/contacts-angular",
+            "outputPath": "dist/contactsangular",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -28,7 +28,8 @@
               "src/styles.css"
             ],
             "scripts": [
-              "src/assets/js/materialize.min.js"]
+              "src/assets/js/materialize.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -63,19 +64,19 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "contacts-angular:build",
+            "browserTarget": "contactsangular:build",
             "proxyConfig": "proxy.conf.json"
           },
           "configurations": {
             "production": {
-              "browserTarget": "contacts-angular:build:production"
+              "browserTarget": "contactsangular:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "contacts-angular:build"
+            "browserTarget": "contactsangular:build"
           }
         },
         "test": {
@@ -112,16 +113,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "contacts-angular:serve"
+            "devServerTarget": "contactsangular:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "contacts-angular:serve:production"
+              "devServerTarget": "contactsangular:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "contacts-angular"
+  "defaultProject": "contactsangular"
 }
